@@ -130,6 +130,39 @@ body{
   color: #111;
 }
 
+/* AUTHOR PROFILE IN HERO */
+.author-profile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.author-img{
+  width: 150px;
+  height: 150px;
+  border-radius: 5%;
+  object-fit: cover;
+
+  border: 3px solid rgba(255,255,255,0.7);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.author-info{
+  text-align: left;
+}
+
+.author-info h1{
+  margin-bottom: 8px;
+}
+
+.blog-author{
+  font-size: 15px;
+  color: rgba(255,255,255,0.75);
+}
+
+
 /* =============== FOOTER (same structure) =============== */
 .footer{
   margin-top: 80px;
