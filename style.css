@@ -129,6 +129,18 @@ header .title
 	
 }
 
+.News{
+    flex-direction: column;
+}
+
+.News .image-box{
+    flex: none;
+}
+
+.News .image-box img{
+    min-height: 220px;
+}
+
 .tile1 {
     border-radius: 20px;
     overflow: hidden;
