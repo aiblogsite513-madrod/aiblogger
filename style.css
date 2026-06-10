@@ -129,24 +129,26 @@ header .title
 	
 }
 
-/* News tile section */
+/* News tile section using the same 3-tile structure as container2 */
 .News{
     width: 80%;
     max-width: 1200px;
     margin: 40px auto;
-    display: flex;
-    align-items: stretch;
-    gap: 25px;
-    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* same 3-column structure as container2 */
+    gap: 30px;
+    padding: 30px;
+    border: 1px solid rgba(0,0,0,0.15);
     border-radius: 30px;
-    background: #111;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.7);
+    box-shadow: 0 5px 20px rgba(0,0,0,1);
 }
 
+/* first tile: image */
 .News .image-box{
-    flex: 0 0 40%;
+    grid-column: 1 / 2;
     border-radius: 20px;
     overflow: hidden;
+    background: #111;
 }
 
 .News .image-box img{
@@ -157,15 +159,16 @@ header .title
     display: block;
 }
 
+/* merged second and third tiles: description */
 .News .description{
-    flex: 1;
+    grid-column: 2 / 4;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 25px;
+    padding: 30px;
     border-radius: 20px;
-    background: #ffffff;
-    color: #111;
+    background: #111;
+    color: #ffffff;
 }
 
 .News .description h2{
@@ -177,6 +180,7 @@ header .title
     font-size: 16px;
     line-height: 1.7;
 }
+
 .tile1 {
     border-radius: 20px;
     overflow: hidden;
@@ -362,17 +366,18 @@ a:focus-visible, button:focus-visible{
 }
 
 @media (max-width: 768px){
-    .News{
-    flex-direction: column;
-}
+  .News{
+    grid-template-columns: 1fr;
+  }
 
-.News .image-box{
-    flex: none;
-}
+  .News .image-box,
+  .News .description{
+    grid-column: 1 / 2;
+  }
 
-.News .image-box img{
+  .News .image-box img{
     min-height: 220px;
-}
+  }
   .container1{
     flex-direction: column;
     height: auto;
